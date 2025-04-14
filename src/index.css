@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,6 +99,36 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+    font-family: 'Inter', sans-serif;
   }
+}
+
+/* Custom styles */
+.place-card {
+  @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg;
+}
+
+.chat-bubble {
+  @apply rounded-2xl px-4 py-2 max-w-xs;
+}
+
+.chat-bubble.user {
+  @apply bg-luvi-primary text-white ml-auto rounded-br-none;
+}
+
+.chat-bubble.bot {
+  @apply bg-luvi-accent text-luvi-dark mr-auto rounded-bl-none;
+}
+
+.price-tag {
+  @apply inline-flex gap-0.5;
+}
+
+.price-tag-active {
+  @apply text-luvi-primary font-bold;
+}
+
+.price-tag-inactive {
+  @apply text-gray-300;
 }
